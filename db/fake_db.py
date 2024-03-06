@@ -29,7 +29,8 @@ class FakeDB:
                     custom_name=machine_specification.custom_name,
                     state=machines.MachineState.CREATED.value,
                     template=validated_template(machine_specification.template),
-                    date_created=datetime.now()),
+                    date_created=datetime.now(),
+                ),
             }
         )
         response = {"machine_id": machine_id}

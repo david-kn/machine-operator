@@ -1,0 +1,84 @@
+black....................................................................[41mFailed[m
+[2m- hook id: black[m
+[2m- files were modified by this hook[m
+
+[1mreformatted db/fake_db.py[0m
+[1mreformatted api_v1/endpoints/machines.py[0m
+
+[1mAll done! ✨ 🍰 ✨[0m
+[34m[1m2 files [0m[1mreformatted[0m, [34m2 files [0mleft unchanged.
+[1mreformatted views/home.py[0m
+[1mreformatted main.py[0m
+[1mreformatted models/machines.py[0m
+
+[1mAll done! ✨ 🍰 ✨[0m
+[34m[1m3 files [0m[1mreformatted[0m.
+
+isort....................................................................[42mPassed[m
+mypy.....................................................................[41mFailed[m
+[2m- hook id: mypy[m
+[2m- exit code: 1[m
+
+db/fake_db.py:38: [1m[31merror:(B[m Argument (B[m[1m"state"(B[m to (B[m[1m"Machine"(B[m has incompatible type (B[m[1m"str"(B[m; expected (B[m[1m"MachineState"(B[m  (B[m[33m[arg-type](B[m
+[1m[31mFound 1 error in 1 file (checked 4 source files)(B[m
+db/fake_db.py:38: [1m[31merror:(B[m Argument (B[m[1m"state"(B[m to (B[m[1m"Machine"(B[m has incompatible type (B[m[1m"str"(B[m; expected (B[m[1m"MachineState"(B[m  (B[m[33m[arg-type](B[m
+[1m[31mFound 1 error in 1 file (checked 3 source files)(B[m
+
+pylint...................................................................[41mFailed[m
+[2m- hook id: pylint[m
+[2m- exit code: 22[m
+
+************* Module api
+api_v1/api.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+api_v1/api.py:3:0: E0401: Unable to import 'api_v1.endpoints' (import-error)
+************* Module fake_db
+db/fake_db.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+db/fake_db.py:6:0: E0401: Unable to import 'models' (import-error)
+db/fake_db.py:7:0: E0401: Unable to import 'utils.validation' (import-error)
+db/fake_db.py:10:0: C0115: Missing class docstring (missing-class-docstring)
+db/fake_db.py:14:4: C0116: Missing function or method docstring (missing-function-docstring)
+db/fake_db.py:48:4: C0116: Missing function or method docstring (missing-function-docstring)
+db/fake_db.py:60:4: C0116: Missing function or method docstring (missing-function-docstring)
+db/fake_db.py:69:4: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module validation
+utils/validation.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+utils/validation.py:1:0: E0401: Unable to import 'models' (import-error)
+utils/validation.py:4:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module machines
+api_v1/endpoints/machines.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+api_v1/endpoints/machines.py:6:0: E0401: Unable to import 'db.fake_db' (import-error)
+api_v1/endpoints/machines.py:7:0: E0401: Unable to import 'models' (import-error)
+api_v1/endpoints/machines.py:15:0: C0116: Missing function or method docstring (missing-function-docstring)
+api_v1/endpoints/machines.py:20:11: W0718: Catching too general exception Exception (broad-exception-caught)
+api_v1/endpoints/machines.py:21:8: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+api_v1/endpoints/machines.py:30:0: C0116: Missing function or method docstring (missing-function-docstring)
+api_v1/endpoints/machines.py:35:11: W0718: Catching too general exception Exception (broad-exception-caught)
+api_v1/endpoints/machines.py:36:8: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+api_v1/endpoints/machines.py:45:0: C0116: Missing function or method docstring (missing-function-docstring)
+api_v1/endpoints/machines.py:50:11: W0718: Catching too general exception Exception (broad-exception-caught)
+api_v1/endpoints/machines.py:51:8: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+api_v1/endpoints/machines.py:60:0: C0116: Missing function or method docstring (missing-function-docstring)
+api_v1/endpoints/machines.py:65:11: W0718: Catching too general exception Exception (broad-exception-caught)
+api_v1/endpoints/machines.py:66:8: W1203: Use lazy % formatting in logging functions (logging-fstring-interpolation)
+api_v1/endpoints/machines.py:75:0: C0116: Missing function or method docstring (missing-function-docstring)
+
+------------------------------------------------------------------
+Your code has been rated at 3.98/10 (previous run: 7.73/10, -3.75)
+
+************* Module views.home
+views/home.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+views/home.py:7:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module main
+main.py:12:0: C0116: Missing function or method docstring (missing-function-docstring)
+main.py:16:0: C0116: Missing function or method docstring (missing-function-docstring)
+************* Module machines
+models/machines.py:1:0: C0114: Missing module docstring (missing-module-docstring)
+models/machines.py:8:0: C0115: Missing class docstring (missing-class-docstring)
+models/machines.py:13:0: C0115: Missing class docstring (missing-class-docstring)
+models/machines.py:20:0: C0115: Missing class docstring (missing-class-docstring)
+models/machines.py:25:0: C0115: Missing class docstring (missing-class-docstring)
+models/machines.py:33:4: C0116: Missing function or method docstring (missing-function-docstring)
+
+------------------------------------------------------------------
+Your code has been rated at 7.73/10 (previous run: 3.98/10, +3.75)
+

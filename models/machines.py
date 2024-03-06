@@ -37,6 +37,6 @@ class Machine(BaseModel):
             "template": self.template.value,
             "state": self.state.value,
             "date_created": self.date_created.strftime("%Y-%d-%m, %H:%M:%S"),
-            "date_deleted": self.date_deleted.strftime("%m.%d.%Y %H:%M:%S") if self.date_deleted else None,
+            "date_deleted": (self.date_deleted.strftime("%m.%d.%Y %H:%M:%S") if self.date_deleted else None),
         }
         return response
